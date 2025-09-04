@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Энэрэлийн Вэбсайт</title>
+  <meta name="description" content="Энэрэлийн хувийн нэг хуудас вэбсайт" />
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --card:#111827;        /* gray-900 */
+      --text:#e5e7eb;        /* gray-200 */
+      --muted:#9ca3af;       /* gray-400 */
+      --accent:#38bdf8;      /* sky-400 (blue theme) */
+      --accent-2:#60a5fa;    /* blue-400 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:0 auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(15,23,42,.75);backdrop-filter:blur(10px);border-bottom:1px solid #1f2937;z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    nav .brand{font-weight:800;letter-spacing:.5px}
+    nav .links a{margin-left:16px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:40px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #1f2937;padding:6px 12px;border-radius:999px;color:var(--muted);font-size:14px}
+    h1{font-size:clamp(28px,6vw,48px);line-height:1.1;margin:12px 0 8px;font-weight:900}
+    .lead{color:var(--muted);font-size:clamp(16px,2.6vw,18px)}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:14px;border:1px solid #1f2937;background:#111827;color:#fff;font-weight:700;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none}
+    .btn:hover{transform:translateY(-1px)}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:18px;padding:18px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    section{padding:30px 0}
+    h2{font-size:28px;margin:6px 0 12px}
+    .pill{display:inline-block;border:1px solid #1f2937;border-radius:999px;padding:6px 10px;color:var(--muted);font-size:13px;margin:2px 6px 2px 0}
+    footer{border-top:1px solid #1f2937;color:var(--muted);padding:24px 0;text-align:center;margin-top:24px}
+    /* Responsive */
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      nav .links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Энэрэл</div>
+        <div class="links">
+          <a href="#about">Тухай</a>
+          <a href="#projects">Төслүүд</a>
+          <a href="#contact">Холбогдох</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge">👋 Сайн уу! Миний онлайн булан</span>
+        <h1>Сайн байна уу, би <span style="background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">Энэрэл</span>.</h1>
+        <p class="lead">Энд би өөрийн тухай, хийж буй төслүүд, холбоо барих мэдээллээ тавьдаг. Доорх товчуудаар үзээд, хүсвэл надад бичээрэй ✨</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">Төслүүдийг үзэх</a>
+          <a class="btn" href="#contact">Холбоо барих</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Товч танилцуулга</h3>
+        <p style="margin:0;color:var(--muted)">Тоглоом сонирхдог, код бичих гэж суралцаж байгаа нэгэн 🛠️. Саяхан миний хийсэн бяцхан тоглоомын санаа: Bubble Gun, Ice Gun, Laser Gun 😀</p>
+        <div style="margin-top:12px">
+          <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">Game Ideas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>👨‍🚀 Намайг товчхон</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p>Би шинэ технологи сурах дуртай. Ирээдүйд өөрийн жижиг тоглоомыг вэб дээр гаргах мөрөөдөлтэй. Одоогоор нэг файлын сайт хийж эхэлж байна.</p>
+        </div>
+        <div class="card">
+          <p>Чөлөөт цагаараа аялал, хөгжим, логик бодлого хийдэг. Хэрвээ хамтран ажиллах санал байвал доорх холбоогоор надтай холбогдоорой.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>🧩 Төслүүд</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3 style="margin-top:0">Mini Game – Bubble Gun</h3>
+          <p style="color:var(--muted)">Бөмбөлөг бууддаг жижиг концепт. Удахгүй тоглож болдог демо байрлуулна.</p>
+          <button class="btn" onclick="alert('Демо удахгүй!')">Демо</button>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Ice Gun Idea</h3>
+          <p style="color:var(--muted)">Эсрэг талын хөдөлгөөнийг хэсэг хугацаанд хөлдөөх механик.</p>
+          <button class="btn" onclick="alert('Тайлбар PDF удахгүй!')">Дэлгэрэнгүй</button>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Laser Gun Concept</h3>
+          <p style="color:var(--muted)">Шугаман цохилт ба ханын рикошет туршилтууд.</p>
+          <button class="btn" onclick="alert('GIF удахгүй!')">GIF үзэх</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>📬 Холбоо барих</h2>
+      <div class="card">
+        <p style="margin:0 0 10px">Надтай холбогдох хамгийн хялбар арга — имэйл эсвэл мессеж.</p>
+        <ul style="margin:0 0 12px 18px;color:var(--muted)">
+          <li>Имэйл: <a href="mailto:cabdog88@gmail.com">cabdog88@gmail.com</a></li>
+          <li>Facebook / Messenger: <a href="#" target="_blank" rel="noopener">fb.com/yourprofile</a></li>
+        </ul>
+        <form onsubmit="sendMessage(event)" style="display:grid;gap:10px;margin-top:6px">
+          <input required placeholder="Таны нэр" id="name" style="padding:12px;border-radius:12px;border:1px solid #1f2937;background:#0b1225;color:#fff" />
+          <input required type="email" placeholder="Таны имэйл" id="email" style="padding:12px;border-radius:12px;border:1px solid #1f2937;background:#0b1225;color:#fff" />
+          <textarea required placeholder="Танд юу туслах вэ?" id="msg" rows="4" style="padding:12px;border-radius:12px;border:1px solid #1f2937;background:#0b1225;color:#fff"></textarea>
+          <button class="btn primary" type="submit">Захидал илгээх</button>
+          <p id="status" style="color:var(--muted);margin:0"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Энэрэл · Нэг файлын сайт
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple message handler (mailto fallback)
+    function sendMessage(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+      const body = encodeURIComponent(`Нэр: ${name}\nИмэйл: ${email}\nМессеж: ${msg}`);
+      const mail = `mailto:cabdog88@gmail.com?subject=${encodeURIComponent('Вэбсайтаас илгээсэн мессеж')}&body=${body}`;
+      document.getElementById('status').textContent = 'Имэйл програм нээгдэж байна...';
+      window.location.href = mail;
+    }
+  </script>
+</body>
+</html>
